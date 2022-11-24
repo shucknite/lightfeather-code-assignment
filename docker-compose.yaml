@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  backend:
+    build: .
+    command: npm start 
+    ports:
+      - target: 8000
+        published: 8000
+
+  frontend:
+    build: frontend
+    command: npm start
+    ports: 
+       - target: 3000
+         published: 3000 
